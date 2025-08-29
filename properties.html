@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="properties.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Properties</title>
+</head>
+<body>
+
+    <header class="headerContainer">
+        
+            <div class="contactInfo">
+           <div>
+            <img src="../images/closed-mail-envelope.png" alt="email icon" class="emailIcon">
+            <span>Email: info@villaagency.com</span>
+           </div>
+           <div>
+            <img src="../images/map.png" alt="location icon" class="locationIcon">
+            <span>Location: 123 Villa St, Paradise City</span>
+           </div>
+           </div>
+           <div class="socialMediaIcons">
+            <div class="Icon"  aria-label="Facebook">
+                <img src="../images/communication.png" alt="facebook icon">
+            </div>
+            <div class="Icon"  aria-label="Twitter">
+                <img src="../images/twitter-black-shape.png" alt="twitter icon">
+            </div>
+            <div class="Icon"  aria-label="LinkedIn">
+                <img src="../images/linkedin (2).png" alt="linkedin icon">
+            </div>
+            <div class="Icon"  aria-label="Instagram">
+                <img src="../images/instagram.png" alt="instagram icon">
+            </div>
+           </div>
+       
+    </header>   
+       <hr>
+  <main>
+       <nav class="navbar">
+         <h1 class="logo">VILLA</h1>
+
+         <!-- Hidden checkbox (controls toggle) -->
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">☰</label>
+
+          <ul class="nav-links">
+            <li><a href="index.html" class="home" target="_parent">Home</a></li>
+            <li><a href="properties.html" class="properties" target="_parent">Properties</a></li>
+            <li><a href="details.html" class="property-details" target="_parent">Property Details</a></li>
+            <li><a href="contact.html" class="contact-us" target="_parent">Contact Us</a></li>
+            <li class="schedule-visit">
+                <a href="https://wa.me/2349015599954" target="_blank">>
+                    <img src="../images/calendar-silhouette.png" alt="Schedule Logo" class="scheduleIcon">
+                    <span>Schedule a Visit</span>
+                </a>
+            </li>
+          </ul>
+ 
+          
+        </nav>
+        <main>
+            <section class="page-heading">
+                <img src="../images/page-heading-bg.jpg" alt="Header image" class="header_bg">
+                <h4>home / properties</h4>
+                <h1>PROPERTIES</h1>
+            </section>
+            <section class="properties_filter">
+                <div class="properties_list">
+                    <ul>
+                        <li><a href="#all" class="active">Show All</a></li>
+                        <li><a href="#apartment">Apartment</a></li>
+                        <li><a href="#villa">Villa House</a></li>
+                        <li><a href="#penthouse">Pent House</a></li>
+                    </ul>
+                </div>
+
+
+                  <!-- Hidden anchors for CSS :target -->
+                   <span id="all"></span>
+                   <span id="apartment"></span>
+                   <span id="villa"></span>
+                   <span id="penthouse"></span>
+
+
+
+                <div class="properties_images" data-type="all">
+                    <div class="property_image" data-type="villa">
+                        <img src="../images/property-01.jpg" alt="Property Image">
+                        <div class="property_info">
+                            <h4>Luxury Villa</h4>
+                            <h2>$2.500.000</h2>
+                        </div>
+
+                <div class="property_location">
+
+                    <h3>18 New Street Miami, OR 97219</h3>
+                    <p>Bedroom: <span style="font-weight: 700;">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">8</span> <br>
+                    Area: <span style="font-weight: 700;">545m2</span>&nbsp;&nbsp;&nbsp;&nbsp;Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">6 spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+                
+                </div>
+               
+
+                <div class="property_image" data-type="villa">
+                    <img src="../images/property-02.jpg" alt="Property Image">
+                    <div class="property_info">
+                        <h4>Luxury Villa</h4>
+                        <h2>$1.180.000</h2>
+                    </div>
+                <div class="property_location">
+                    <h3>54 Mid Street Florida, OR 27001</h3>
+                    <p>Bedroom: <span style="font-weight: 700;">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">5</span> <br>
+                    Area: <span style="font-weight: 700;">450m2</span>&nbsp;&nbsp;&nbsp;&nbsp;Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">8  spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+
+            <div class="property_image" data-type="penthouse">
+                <img src="../images/property-03.jpg" alt="Property Image">
+                <div class="property_info">
+                    <h4>Luxury Villa</h4>
+                    <h2>$1.460.000</h2>
+                </div>
+                <div class="property_location">
+                     <h3>26 Old Street Miami, OR 38540</h3>
+                     <p>Bedroom: <span style="font-weight: 700;">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">4</span>&nbsp;&nbsp;&nbsp;&nbsp;Area: <span style="font-weight: 700;">225m2</span> <br>
+                    Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">10 spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+            <div class="property_image" data-type="apartment">
+                <img src="../images/property-04.jpg" alt="Property Image" >
+                <div class="property_info">
+                    <h4>Apartment</h4>
+                    <h2>$584.500</h2>
+                </div>
+                <div class="property_location">
+                     <h3>12 New Street Miami, OR 12650</h3>
+                     <p>Bedroom: <span style="font-weight: 700;">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Area: <span style="font-weight: 700;">125m2</span>  <br>
+                    Floor: <span style="font-weight: 700;">25th</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">2 cars</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+            <div class="property_image" data-type="penthouse">
+                <img src="../images/property-05.jpg" alt="Property Image">
+                <div class="property_info">
+                    <h4>Penthouse</h4>
+                    <h2>$925.600</h2>
+                </div>
+                <div class="property_location">
+                     <h3>34 Beach Street Miami, OR 42680</h3>
+                     <p>Bedroom: <span style="font-weight: 700;">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">4</span>&nbsp;&nbsp;&nbsp;&nbsp;Area: <span style="font-weight: 700;">180m2</span>  <br>
+                    Floor: <span style="font-weight: 700;">38th</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">2 cars</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+
+            <div class="property_image" data-type="apartment">
+                <img src="../images/property-06.jpg" alt="Property Image">
+                <div class="property_info">
+                    <h4>Modern Condo</h4>
+                    <h2>$450.000</h2>
+                </div>
+                <div class="property_location">
+                     <h3>22 New Street Portland, OR 16540</h3>
+                     <p>Bedroom: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">2</span>&nbsp;&nbsp;&nbsp;&nbsp;Area: <span style="font-weight: 700;">165m2</span>  <br>
+                    Floor: <span style="font-weight: 700;">26th</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">3 cars</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+
+            <div class="property_image" data-type="apartment">
+                <img src="../images/property-03.jpg" alt="Property Image">
+                <div class="property_info">
+                    <h4>Luxury Villa</h4>
+                    <h2>$980.000</h2>
+                </div>
+                <div class="property_location">
+                     <h3>14 New Street Miami, OR 36450</h3>
+                     <p>Bedroom: <span style="font-weight: 700;">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">8</span><br>
+                   Area: <span style="font-weight: 700;">550m2</span>&nbsp;&nbsp;&nbsp;&nbsp;Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">8  spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+               
+
+                <div class="property_image" data-type="villa">
+                    <img src="../images/property-02.jpg" alt="Property Image">
+                    <div class="property_info">
+                        <h4>Luxury Villa</h4>
+                        <h2>$1.520.000</h2>
+                    </div>
+                <div class="property_location">
+                    <h3>26 Old Street Miami, OR 12680</h3>
+                    <p>Bedroom: <span style="font-weight: 700;">12</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">15</span> <br>
+                    Area: <span style="font-weight: 700;">380m2</span>&nbsp;&nbsp;&nbsp;&nbsp;Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">14  spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+            </div>
+
+            <div class="property_image" data-type="villa">
+                        <img src="../images/property-01.jpg" alt="Property Image">
+                        <div class="property_info">
+                            <h4>Luxury Villa</h4>
+                            <h2>$2.500.000</h2>
+                        </div>
+
+                <div class="property_location">
+
+                    <h3>18 New Street Miami, OR 97219</h3>
+                    <p>Bedroom: <span style="font-weight: 700;">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bathrooms: <span style="font-weight: 700;">12</span> <br>
+                    Area: <span style="font-weight: 700;">860m2</span>&nbsp;&nbsp;&nbsp;&nbsp;Floor: <span style="font-weight: 700;">3</span>&nbsp;&nbsp;&nbsp;&nbsp;Parking: <span style="font-weight: 700;">10 spots</span></p>
+                    <hr>
+                </div>
+                    <button>Schedule a visit</button>
+                
+                </div>
+        </div>
+            </section>
+
+            <section class="pagination">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">></a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: TemplateMo</p>
+        </footer>
+    
+</body>
+</html>

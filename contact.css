@@ -1,0 +1,546 @@
+* {
+  box-sizing: border-box; /* prevent padding/margin overflow */
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+}
+
+/* ===================
+   Top Header (Contact + Social)
+   =================== */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* wrap on small screens */
+  padding: 8px 20px;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.contactInfo div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactInfo span {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.socialMediaIcons {
+  display: flex;
+  gap: 10px;
+  margin: 0 10px 0 0;
+}
+
+.Icon {
+  width: 32px;
+  height: 32px;
+  background-color: #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.Icon:hover {
+  transform: scale(1.2);
+  background-color: #fd7e14;
+}
+
+.Icon img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===================
+   Navbar
+   =================== */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  
+  padding: 0;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links .home {
+  color: #fd7e14;
+}
+
+.nav-links a:hover {
+  color: #fd7e14;
+}
+
+/* ===================
+   CTA Button (Schedule Visit)
+   =================== */
+.schedule-visit a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0;
+  background-color: #000;  /* CTA base color */
+  color: #fff;
+  border-radius: 30px;      /* pill shape */
+  overflow: hidden;         /* so icon blends with rounding */
+  transition: all 0.3s ease;
+}
+
+.schedule-visit a:hover {
+  color: #fd7e14;
+  background-color: #222;
+}
+
+/* Icon inside CTA */
+.schedule-visit .scheduleIcon {
+  height: 100%; 
+  width: auto;
+  background-color: #fd7e14;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/* Text inside CTA */
+.schedule-visit span {
+  padding: 0 18px;
+  display: inline-block;
+}
+
+/* ===================
+   Hamburger (Mobile Nav)
+   =================== */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none; /* hide checkbox */
+}
+
+/* ===================
+   Responsive Design
+   =================== */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+    margin: 0;
+  }
+  .schedule-visit span {
+    padding: 0 14px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Show menu when checked */
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .schedule-visit {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .schedule-visit .scheduleIcon {
+    padding: 10px 12px 10px 10px;
+  }
+
+  .schedule-visit a {
+    width: 30%;
+    justify-content: center;
+  }
+
+  .socialMediaIcons {
+    margin: 0;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .contactInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .schedule-visit {
+    width: 620px;
+  }
+
+  .schedule-visit a {
+    font-size: 13px;
+  }
+
+  .schedule-visit .scheduleIcon {
+    margin-right: 10px;
+  }
+
+  .schedule-visit span {
+    padding: 0 12px;
+  }
+}
+
+/* ===== Page Heading Section ===== */
+.page-heading {
+  position: relative;
+  width: 100%;
+  height: 300px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background Image */
+.page-heading .header_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ensures image fits nicely */
+  z-index: -1;         /* sends image behind text */
+}
+
+/* Text Styling */
+.page-heading h4 {
+  width: 250px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 14px;
+  color: #222;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.page-heading h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .page-heading {
+    height: 220px;
+    padding: 0 10px;
+  }
+
+  .page-heading h1 {
+    font-size: 28px;
+  }
+
+  .page-heading h4 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-heading {
+    height: 180px;
+  }
+
+  .page-heading h1 {
+    font-size: 22px;
+  }
+}
+
+ /* Contact Section */
+.contact_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 80px 20px;
+  background: #fff;
+  /* flex-wrap: wrap; stack on smaller screens */
+}
+
+/* Left Side: Info */
+.contact_info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact_header .vline {
+  width: 3px;
+  height: 18px;
+  background-color: #fd7e14;
+  margin-right: 8px;
+}
+
+.contact_description {
+    width: 80%;
+}
+
+.contact_methods {
+    margin-top: 80px;
+    width: 35%;
+}
+
+.contact_header h4 {
+  color: #fd7e14;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contact_info h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.contact_info p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Contact Methods (phone + email) */
+.phone_method,
+.email_method {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.phone_method:hover,
+.email_method:hover {
+  transform: translateY(-3px);
+}
+
+.phone_method img,
+.email_method img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.phone_method_text h5,
+.email_method_text h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.phone_method_text p,
+.email_method_text p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Right Side: Form */
+form {
+  flex: 1;
+  min-width: 490px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 30px;
+  background: #f7f7f7;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  background: #efefef;
+}
+
+form textarea {
+  border-radius: 20px;
+  min-height: 120px;
+  resize: none;
+}
+
+form button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #fd7e14;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contact_section {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .contact_info h1 {
+    font-size: 32px;
+  }
+
+  .contact_description {
+    width: 100%;
+  }
+
+  .contact_methods {
+    width: 100%;
+  }
+  .phone_method, .email_method {
+    justify-content: center;
+  }
+  form {
+        min-width: 100%;
+        margin-top: 40px;
+  }     
+  .footer-map iframe {
+    width: 90% !important;
+    height: 300px !important;
+  } 
+}
+
+@media (max-width: 576px) {
+  .contact_info h1 {
+    font-size: 26px;
+  }
+
+  .phone_method,
+  .email_method {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .phone_method img,
+  .email_method img {
+    width: 32px;
+    height: 32px;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  margin: 100px 0 0 0;
+  padding: 20px 20px;
+  text-align: center;
+}
